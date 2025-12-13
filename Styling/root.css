@@ -5,9 +5,10 @@
 
 body, html{
     background-color: #000000;
+    overflow-x: hidden;
 }
 
-body{
+#root{
     display: flex;
     justify-content: center;
     align-items: center;
