@@ -1,5 +1,11 @@
 .cube{
-    border: 2px solid green;
+    /* border: 2px solid green; */
+    /* display: none; */
+    z-index: 2;
+    scale: 0.75;
+    position: absolute;
+    top: 150px;
+    transition: transform 1s ease-in-out;
 }
 
 .cubeContainer{
@@ -10,11 +16,6 @@
     perspective: 2000px;
     transform-style: preserve-3d;
     transform: rotateX(0deg) rotateY(45deg) rotateZ(45deg);
-}
-
-.cubeContainer{
-    position: absolute;
-    top: 25%;
 }
 
 .cubeSide{
@@ -54,9 +55,10 @@
 }
 
 .cubeContainer{
-    animation: spinIt 3s ease-in-out 0s 1,
-               settleIt 3s ease-in-out 3s 1, 
-               showEmAll 24s ease-in-out 6s infinite;
+    animation: itsShowTime 3s ease-in-out 0s 1,
+               spinIt 3s ease-in-out 0s 1,
+               settleIt 3s ease-in-out 6s 1, 
+               showEmAll 24s ease-in-out 9s infinite;
 }
 
 @keyframes showEmAll{
@@ -86,5 +88,33 @@
     }
     to{
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+@keyframes itsShowTime{
+    0%{ scale: 0.15;}
+    100%{scale: 1;}
+}
+
+@media only screen and (min-width: 768px){
+    .cube{
+        scale: 1;
+        top: 250px;
+        left: 101px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .cube{
+        scale: 1.14;
+        top: 310px;
+        left: 161px;
+    }
+}
+
+@media only screen and (min-width: 1252px){
+    .cube{
+        top: 350px;
+        left: 310px;
     }
 }
