@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biraj Adhikari - Portfolio</title>
     <link rel="stylesheet" href="Styling/root.css">
+    <link rel="stylesheet" href="Styling/navBar.css">
     <link rel="stylesheet" href="Styling/cube.css">
+    <link rel="stylesheet" href="Styling/pseudoDecor.css">
+    <link rel="stylesheet" href="Styling/detailCategory.css">
+    <link rel="stylesheet" href="Styling/footer.css">
 </head>
 <body>
     <main id="root">
-        <section id="pesudoDecor">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <nav>
+            <div class="siteLogo"><div id="pp"></div><h1>Biraj Adhikari</h1></div>
+            <img src="Assets/settings.png" width="30px">
+            <section>
+                <div class="navItem">About</div>
+                <div class="navItem">Academics</div>
+                <div class="navItem">Skills</div>
+                <div class="navItem">Experience</div>
+                <div class="navItem">Blog</div>
+                <div class="navItem">Contact</div>
+            </section>
+        </nav>
+        <section id="pseudoDecor">
+            <div class="pseudoDecorer"></div>
+            <div class="pseudoDecorer"></div>
+            <div class="pseudoDecorer"></div>
+            <div class="pseudoDecorer"></div>
+            <div class="pseudoDecorer"></div>
+            <div class="pseudoDecorer"></div>
         </section>
-        <section id="cube">
+        <section class="cube" id="cube">
             <div class="cubeContainer">
                 <div class="cubeSide"></div>
                 <div class="cubeSide"></div>
@@ -27,6 +43,22 @@
                 <div class="cubeSide"></div>
             </div>
         </section>
+        <section id="detailCategory">
+            <div class="category">About</div>
+            <div class="category">Academics</div>
+            <div class="category">Skills</div>
+            <div class="category">Experience</div>
+            <div class="category">Blog</div>
+            <div class="category">Contact</div>
+        </section>
+        <footer>
+            <h3>Biraj Adhikari</h3>
+            <p>adhikaribiraj908@gmail.com</p>
+            <p>+977-9767645497</p>
+        </footer>
     </main>
+    <!-- 3D button to be made -->
+    <script src="Scripts/dynamic.js"></script>
+    <script src="Scripts/navBar.js" type="module"></script>
 </body>
 </html>
