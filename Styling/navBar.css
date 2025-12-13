@@ -1,0 +1,128 @@
+nav{
+    width: 90vw;
+    min-height: 50px;
+    border: 2px solid whitesmoke;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    background: rgba(128, 128, 128, 0.26);
+    position: fixed;
+    top: 25px;
+    z-index: 2;
+    /* display: none; */
+}
+
+nav:hover{
+    background: rgba(128, 128, 128, 0.4);
+}
+
+nav section{
+    width: 100%;
+    min-height: 100px;
+    /* border: 2px solid white; */
+    padding: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    display: none;
+}
+
+.navItem{
+    color: white;
+    width: 11ch;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.siteLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    /* border: 1px solid white; */
+}
+
+h1{
+    color: white;
+    font-size: larger;
+}
+
+#pp{
+    width: 30px;
+    aspect-ratio: 1;
+    background: url(../Assets/BA.png) center center no-repeat;
+    background-size: cover;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+@media only screen and (min-width: 375px){
+    nav{
+        min-height: 75px;
+    }
+    h1{
+        font-size: x-large;
+    }
+    #pp{
+        width: 40px;
+    }
+    nav section{
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 700px){
+    nav section{
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    nav{
+        padding: 0px;
+    }
+    #pp{
+        width: 50px;
+    }
+    nav img{
+        display: none;
+    }
+    .siteLogo{
+        width: 11%;
+    }
+    h1{
+        display: none;
+    }
+    nav section{
+        width: 87%;
+        padding: 0px;
+        gap: 0px;
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    h1{
+        display: block;
+    }
+    .siteLogo{
+        width: 24%;
+        column-gap: 15px;
+    }
+    nav section{
+        display: flex;
+        width: 69%;
+    }
+}
