@@ -1,0 +1,93 @@
+#introduction{
+    width: 90vw;
+    box-sizing: border-box;
+    color: white;
+    border: 2px solid #444444;
+    border-radius: 1rem 0.25rem 1rem 0.25rem;
+    padding: 25px;
+    background: rgba(34, 34, 34, 0.75);
+    /* opacity: 0; */
+    /* display: none; */
+}
+
+#introduction h3{
+    background: linear-gradient(to right, white, grey, brown);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: transparent;
+}
+
+#introduction h3 span:nth-of-type(1){
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#introduction h3 span:nth-of-type(2){
+    font-family: 'Nosifer', 'Times New Roman', Times, serif;
+}
+
+#introduction p{
+    background: linear-gradient(to right, white, grey, brown);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#introduction h3:hover{
+    background: linear-gradient(to right, skyblue, crimson);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#introduction p:hover{
+    background: linear-gradient(to right, skyblue, crimson);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (min-width: 320px){
+    #introduction p{
+        font-size: large;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #introduction{
+        width: 35ch;
+        font-size: larger;
+        /* position: relative; */
+        margin-left: 179px;
+        margin-top: -380px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #introduction{
+        width: 60ch;
+        padding: 50px;
+        margin-top: 280px;
+        margin-left: 503px;
+    }
+}
+
+@media only screen and (min-width: 1252px){
+    #introduction{
+        width: 80ch;
+        margin-top: 323px;
+        margin-left: 704px;
+    }
+    #introduction p{
+        font-size: large;
+    }
+    #introduction h3 span:nth-of-type(1){
+        font-weight: bolder;
+    }
+    #introduction h3 span:nth-of-type(2){
+        font-size: 35px;
+    }
+}
