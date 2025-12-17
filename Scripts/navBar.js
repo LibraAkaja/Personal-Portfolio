@@ -1,39 +1,57 @@
-import { changeCSS, changeCSSall } from "./dynamic.js";
+import { changeCSS } from "./dynamic.js";
 
-// const navBar = document.querySelector("nav");
-// const itemSection = document.querySelector("nav section");
 const hamburgerMenu = document.querySelector("nav img");
-// const cube = document.querySelector(".cube");
 
-function checkDisplayWidth(){
+let clicked = false;
+
+export function checkDisplayWidth(){
     const length = window.innerWidth;
     return length;
 }
 
-let clicked = false;
+function closeMenu(){
+    changeCSS("nav", "padding-top", "0px");
+    changeCSS("nav section", "display", "none");
+    changeCSS("#cube","transform","translateY(0px)");
+    changeCSS("#main","transform","translateY(0px)")
+    clicked = false;
+    return;
+}
+
 hamburgerMenu.addEventListener("click", ()=>{
-    const handleClick = clicked? ()=>{
-        //To close the menu
-        changeCSS("nav", "padding-top", "0px");
-        changeCSS("nav section", "display", "none");
-        changeCSS("#cube","transform","translateY(0px)");
-        clicked = false;
-    } : ()=> {
-        //To open the menu
+    const handleClick = clicked? closeMenu() : ()=> {
         const displayWidth = checkDisplayWidth();
-        const handleAnimationAccWidth = (displayWidth < 420)
-                                        ? ()=> {changeCSS("#cube","transform","translateY(332px)");}
-                                        : (displayWidth > 419 && displayWidth < 768)
-                                          ? ()=> {changeCSS("#cube","transform","translateY(299px)");}
-                                          : ()=> {};
-        handleAnimationAccWidth();
+        const handleCubeAnimationAccWidth = 
+                                    (displayWidth < 321)
+                                    ? ()=>  {changeCSS("#cube", "transform", "translateY(364px)");
+                                             changeCSS("#main","transform","translateY(364px)");
+                                            }
+                                    :   (displayWidth < 376)
+                                        ? ()=>  {changeCSS("#cube", "transform","translateY(350px)");
+                                                 changeCSS("#main","transform","translateY(350px)");
+                                                }
+                                        :   (displayWidth < 420)
+                                            ?   ()=>    {changeCSS("#cube","transform","translateY(328px)");
+                                                         changeCSS("#main","transform","translateY(328px)");
+                                                        }
+                                            :   (displayWidth > 419 && displayWidth < 768)
+                                                ?   ()=>    {changeCSS("#cube","transform","translateY(260px)");
+                                                             changeCSS("#main","transform","translateY(260px)");
+                                                            }
+                                                : ()=> {};
+        handleCubeAnimationAccWidth();
         setTimeout(()=>{        
             changeCSS("nav","padding-top", "25px");
             changeCSS("nav section", "display", "flex");
         },500);
         clicked = true;
+        window.addEventListener("scroll",()=>{
+            const scrollY = window.scrollY || window.pageYOffset;
+            const handleScroll = (scrollY > 0)
+                                ? closeMenu
+                                : {}; 
+            handleScroll();
+        },{once:true});
     };
     handleClick();
 });
-
-/* Logic to keep checking the size of the screen */

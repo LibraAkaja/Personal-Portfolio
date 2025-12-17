@@ -8,6 +8,18 @@
     transition: transform 1s ease-in-out;
 }
 
+.cube.hide{
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.4s ease;
+}
+
+.cube.show{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.4s ease;
+}
+
 .cubeContainer{
     width: 200px;
     aspect-ratio: 1;
@@ -24,44 +36,55 @@
     border: 2px solid #380356;
     border-radius: 0.5rem;
     position: absolute;
-    /* background: url(../Assets/BA.jpg) center center no-repeat;
-    background-size: cover; */
-    background-color: yellow;
     backface-visibility: hidden;
 }
 
 .cubeSide:nth-of-type(1){
     transform: translateZ(105px);
+    background: url(../Assets/BA4.jpg) center center no-repeat;
+    background-size: cover;
+    filter: brightness(0.8);
 }
 
 .cubeSide:nth-of-type(6){
-    transform: translateZ(-105px) rotateX(180deg) rotateZ(180deg);
+    transform: translateZ(-105px) rotateX(180deg);
+    background: url(../Assets/BA.png) center center no-repeat;
+    background-size: cover;
 }
 
 .cubeSide:nth-of-type(2){
     transform: translateY(105px) rotateX(-90deg);
+    background: url(../Assets/BA1.jpg) center center no-repeat;
+    background-size: cover;
+    filter: brightness(0.8);
 }
 
 .cubeSide:nth-of-type(3){
-    transform: translateY(-105px) rotateX(90deg);
+    transform: translateY(-105px) rotateX(90deg) rotateZ(180deg);
+    background: url(../Assets/BA2.jpg) center center no-repeat;
+    background-size: cover;
+    filter: brightness(0.8);
 }
 
 .cubeSide:nth-of-type(4){
     transform: translateX(-105px) rotateY(-90deg);
+    background: url(../Assets/BA3.jpg) center center no-repeat;
+    background-size: cover;
 }
 
 .cubeSide:nth-of-type(5){
     transform: translateX(105px) rotateY(90deg) rotateZ(-90deg);
+    background: url(../Assets/AA.jpg) center center no-repeat;
+    background-size: cover;
+    filter: brightness(1.2);
 }
 
 .cubeContainer{
     animation: itsShowTime 3s ease-in-out 0s 1,
-               spinIt 3s ease-in-out 0s 1,
-               settleIt 3s ease-in-out 6s 1, 
-               showEmAll 24s ease-in-out 9s infinite;
+               spinIt 3s ease-in-out 0s 1;
 }
 
-@keyframes showEmAll{
+/* @keyframes showEmAll{
   0% {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
   12.5% {transform: rotateX(30deg) rotateY(0deg) rotateZ(30deg);}
   25% {transform: rotateX(45deg) rotateY(15deg) rotateZ(60deg);}
@@ -71,29 +94,41 @@
   75% {transform: rotateX(45deg) rotateY(30deg) rotateZ(270deg)}
   87.5% {transform: rotateX(15deg) rotateY(15deg) rotateZ(315deg);}
   100%{transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);}
-}
+} */
 
 @keyframes spinIt{
     from{
         transform: rotateX(0deg) rotateY(45deg) rotateZ(45deg);
     }
     to{
-        transform: rotateX(0deg) rotateY(4005deg) rotateZ(45deg);
+        transform: rotateX(0deg) rotateY(1125deg) rotateZ(45deg);
     }
 }
 
-@keyframes settleIt{
+/* @keyframes settleIt{
     form{
         transform: rotateX(0deg) rotateY(4005deg) rotateZ(45deg);
     }
     to{
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
-}
+} */
 
 @keyframes itsShowTime{
     0%{ scale: 0.15;}
     100%{scale: 1;}
+}
+
+@media only screen and (min-width: 375px){
+    .cube{
+        top: 175px;
+    }
+}
+
+@media only screen and (min-width: 420px){
+    .cube{
+        top: 184px;
+    }
 }
 
 @media only screen and (min-width: 768px){

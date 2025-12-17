@@ -1,7 +1,7 @@
 nav{
     width: 90vw;
     min-height: 50px;
-    border: 2px solid whitesmoke;
+    border: 2px solid #444444;
     border-radius: 1rem;
     box-sizing: border-box;
     display: flex;
@@ -10,12 +10,11 @@ nav{
     flex-wrap: wrap;
     row-gap: 25px;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
     background: rgba(128, 128, 128, 0.26);
     position: fixed;
     top: 25px;
-    z-index: 2;
-    /* display: none; */
+    z-index: 4;
 }
 
 nav:hover{
@@ -25,7 +24,6 @@ nav:hover{
 nav section{
     width: 100%;
     min-height: 100px;
-    /* border: 2px solid white; */
     padding: 25px;
     display: flex;
     justify-content: space-evenly;
@@ -39,11 +37,16 @@ nav section{
     color: white;
     width: 11ch;
     height: 40px;
-    border: 2px solid white;
+    border: 2px solid #666666;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: content-box;
+}
+
+.navItem a{
+    all: unset;
 }
 
 .siteLogo{
@@ -51,12 +54,14 @@ nav section{
     justify-content: center;
     align-items: center;
     column-gap: 8px;
-    /* border: 1px solid white; */
 }
 
 h1{
-    color: white;
     font-size: larger;
+    background: linear-gradient(to right, white, grey, brown);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #pp{
@@ -66,6 +71,20 @@ h1{
     background-size: cover;
     border: 1px solid white;
     border-radius: 50%;
+}
+
+.navItem span{
+    background: linear-gradient(to right, white, grey, brown);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navItem span:hover, h1:hover{
+    background: linear-gradient(to right, skyblue, crimson);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (min-width: 375px){
@@ -111,6 +130,16 @@ h1{
         gap: 0px;
         display: flex;
     }
+    .navItem span{
+        width: 11ch;
+        height: 40px;
+        border-radius: 0.75rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #888888;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -124,5 +153,18 @@ h1{
     nav section{
         display: flex;
         width: 69%;
+    }
+}
+
+@media only screen and (min-width: 1252px){
+    .navItem{
+        padding: 5px;
+        font-size: large;
+    }
+    h1{
+        font-size: xx-large;
+    }
+    .navItem span{
+        letter-spacing: 1px;
     }
 }
