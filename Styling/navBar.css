@@ -18,7 +18,7 @@ nav{
 }
 
 nav:hover{
-    background: rgba(128, 128, 128, 0.4);
+    background: #333333;
 }
 
 nav section{
@@ -43,6 +43,7 @@ nav section{
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    cursor: pointer;
 }
 
 .navItem a{
@@ -57,11 +58,12 @@ nav section{
 }
 
 h1{
-    font-size: larger;
+    font-size: x-large;
     background: linear-gradient(to right, white, grey, brown);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor: default;
 }
 
 #pp{
@@ -73,26 +75,20 @@ h1{
     border-radius: 50%;
 }
 
-.navItem span{
-    background: linear-gradient(to right, white, grey, brown);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.navItem span:hover, h1:hover{
+h1:hover{
     background: linear-gradient(to right, skyblue, crimson);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+nav.scrolled{
+    background: #333333;
+}
+
 @media only screen and (min-width: 375px){
     nav{
         min-height: 75px;
-    }
-    h1{
-        font-size: x-large;
     }
     #pp{
         width: 40px;
@@ -102,14 +98,18 @@ h1{
     }
 }
 
-@media only screen and (min-width: 700px){
+@media only screen and (min-width:647px){
+    nav{
+        width: 80vw;
+    }
     nav section{
-        width: 400px;
+        width: 450px;
     }
 }
 
 @media only screen and (min-width: 768px){
     nav{
+        width: 90vw;
         padding: 0px;
     }
     #pp{
@@ -139,6 +139,19 @@ h1{
         justify-content: center;
         align-items: center;
         border: 2px solid #888888;
+        background: linear-gradient(to right, white, grey, brown);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .navItem span:hover{
+        background: linear-gradient(to right, skyblue, crimson);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .navItem:hover{
+        background-color: #222222;
     }
 }
 

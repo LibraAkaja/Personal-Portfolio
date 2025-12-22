@@ -13,46 +13,74 @@ body, html{
 
 body{
     display: flex;
-    justify-content: center;
-    align-items: stretch;
-    overflow-y: auto;
-}
-
-#root{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    overflow-y: visible;
+    justify-content: stretch;
+    align-items: center;
+    overflow-y: hidden;
 }
 
-#main{
+main{
     width: 90vw;
-    /* position: relative; */
-    /* top: 440px; */
-    margin-top: 440px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* border: 2px solid #444444; */
-    flex-wrap: wrap;
-    row-gap: 88px;
+    margin-top: 146px;
     z-index: 2;
     transition: transform 0.4s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 71px;
+    justify-items: center;
+    align-items: center;
+}
+
+.detailCategory {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.detailCategory.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media only screen and (min-width: 375px){
-    #main{
-        margin-top: 460px;
-        flex-direction: row;
-        column-gap: 75px;
+    main{
+        margin-top: 172px;
+        row-gap: 74px;
     }
 }
 
 @media only screen and (min-width: 768px){
-    #main{
-        border: 2px solid #444444;
-        margin-top: 620px;
+    main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main > section{
+        min-width: 200px;
+        max-width: 44%;
+        min-height: 400px;
+    }
+    main > section:nth-of-type(1){
+        min-width: 44%;
+    }
+    main > section:nth-of-type(2){
+        min-height: 260px;
+    }
+    .detailCategory{
+        scroll-margin-top: 175px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    main{
+        justify-content: space-evenly;
+    }
+    main > section:nth-of-type(1){
+        min-width: 30%;
+    }
+    main > section:nth-of-type(3), main > section:nth-of-type(4), main > section:nth-of-type(5), main > section:nth-of-type(6){
+        max-width: 35%;
     }
 }

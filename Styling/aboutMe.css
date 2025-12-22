@@ -1,20 +1,14 @@
 #aboutMe{
     width: 90vw;
-    /* position: absolute; */
-    /* top: 50px; */
     color: white;
     padding: 25px;
     border: 2px solid #444444;
     border-radius: 1rem 0.25rem 1rem 0.25rem;
     box-sizing: border-box;
     background: rgba(34, 34, 34, 0.75);
-    /* opacity: 0; */
-    /* top: 400px; */
-    /* display: none; */
 }
 
 #aboutMe span{
-    /* position: relative; */
     margin-top: -40px;
     margin-left: 13px;
     padding: 5px;
@@ -23,7 +17,6 @@
     border: 2px solid #444444;
     border-radius: 0.5rem 0.25rem 0.5rem 0.25rem;
     font-size: larger;
-    /* border: 2px solid red; */
     display: block;
     width: 13ch;
     text-align: center;

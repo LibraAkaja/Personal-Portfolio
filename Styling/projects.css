@@ -9,16 +9,11 @@
     align-items: center;
     flex-direction: column;
     row-gap: 25px;
-    /* position: absolute;
-    top: 400px; */
     color: white;
     background: rgba(34, 34, 34, 0.75);
-    /* opacity: 0; */
-    /* display: none; */
 }
 
 #myProjects span{
-    /* position: relative; */
     margin-top: -40px;
     margin-left: -40px;
     width: 13ch;
@@ -56,12 +51,5 @@
 @media only screen and (min-width: 320px){
     #myProjects  p{
         font-size: larger;
-    }
-}
-
-@media only screen and (min-width: 768px){
-    #myProjects{
-        /* position: relative; */
-        margin-top: -200px;
     }
 }
