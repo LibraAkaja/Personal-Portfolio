@@ -14,19 +14,19 @@ function createObserver({rootMargin, addClass, removeClass=""}){
             });
         },
         {
-            threshold: 0.1,
+            threshold: 0,
             rootMargin
         }
     );
 }
 
 const sectionObserver = createObserver({
-    rootMargin: "-150px 0px -150px 0px",
+    rootMargin: "-301px 0px -100px 0px",
     addClass: "show"
 });
 
 const cubeObserver = createObserver({
-    rootMargin: "-125px 0px 0px -75px",
+    rootMargin: "-301px 0px 0px 0px",
     addClass: "show",
     removeClass: "hide"
 });
