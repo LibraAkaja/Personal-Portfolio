@@ -12,8 +12,7 @@ export function checkDisplayWidth(){
 function closeMenu(){
     changeCSS("nav", "padding-top", "0px");
     changeCSS("nav section", "display", "none");
-    changeCSS("#cube","transform","translateY(0px)");
-    changeCSS("#main","transform","translateY(0px)")
+    changeCSS("main","transform","translateY(0px)")
     clicked = false;
     return;
 }
@@ -22,22 +21,14 @@ hamburgerMenu.addEventListener("click", ()=>{
     const handleClick = clicked? closeMenu() : ()=> {
         const displayWidth = checkDisplayWidth();
         const handleCubeAnimationAccWidth = 
-                                    (displayWidth < 321)
-                                    ? ()=>  {changeCSS("#cube", "transform", "translateY(364px)");
-                                             changeCSS("#main","transform","translateY(364px)");
-                                            }
-                                    :   (displayWidth < 376)
-                                        ? ()=>  {changeCSS("#cube", "transform","translateY(350px)");
-                                                 changeCSS("#main","transform","translateY(350px)");
-                                                }
-                                        :   (displayWidth < 420)
-                                            ?   ()=>    {changeCSS("#cube","transform","translateY(328px)");
-                                                         changeCSS("#main","transform","translateY(328px)");
-                                                        }
-                                            :   (displayWidth > 419 && displayWidth < 768)
-                                                ?   ()=>    {changeCSS("#cube","transform","translateY(260px)");
-                                                             changeCSS("#main","transform","translateY(260px)");
-                                                            }
+                                    (displayWidth < 375)
+                                    ? ()=>  {changeCSS("main","transform","translateY(263px)");}
+                                    :   (displayWidth < 425)
+                                        ?   ()=>    {changeCSS("main","transform","translateY(250px)");}
+                                        :   (displayWidth > 424 && displayWidth < 648)
+                                            ?   ()=>    {changeCSS("main","transform","translateY(251px)");}
+                                            :   (displayWidth > 647 && displayWidth < 768)
+                                                ?   ()=>    {changeCSS("main","transform","translateY(182px)");}
                                                 : ()=> {};
         handleCubeAnimationAccWidth();
         setTimeout(()=>{        
@@ -54,4 +45,10 @@ hamburgerMenu.addEventListener("click", ()=>{
         },{once:true});
     };
     handleClick();
+});
+
+/* Navbar animation */
+const nav = document.querySelector("nav");
+window.addEventListener("scroll",()=>{
+    nav.classList.toggle("scrolled",window.scrollY > 5);
 });
