@@ -34,34 +34,34 @@
 }
 
 .decorator:nth-of-type(2){
-    top: 50px;
+    top: 62px;
     left: -175px;
 }
 
 .decorator:nth-of-type(4){
-    top: 225px;
+    top: 237px;
     right: -150px;
 }
 
 .decorator:nth-of-type(6){
-    top: 400px;
+    top: 412px;
     left: -175px;
 }
 
 .decorator:nth-of-type(1){
-    top: 100px;
+    top: 112px;
     right: 50px;
     animation: spinClockwise 8s ease 0s infinite alternate;
 }
 
 .decorator:nth-of-type(3){
-    top: 300px;
+    top: 312px;
     left: 50px;
     animation: spinAnticlockwise 8s ease 0s infinite alternate;
 }
 
 .decorator:nth-of-type(5){
-    top: 500px;
+    top: 512px;
     right: 50px;
     animation: spinClockwise 8s ease 0s infinite alternate;
 }
