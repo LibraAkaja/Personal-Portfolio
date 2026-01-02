@@ -39,12 +39,12 @@
     -webkit-text-fill-color: transparent;
 }
 
-#contacts img:nth-of-type(2){
+#contacts a img{
     transition: filter 0.4s ease;
     filter: contrast(0.4);
 }
 
-#contacts img:nth-of-type(2):hover{
+#contacts a img:hover{
     filter: contrast(0) invert(1);
 }
 
