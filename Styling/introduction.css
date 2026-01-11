@@ -16,7 +16,6 @@
     font-size: 25px;
     letter-spacing: 2px;
     color: transparent;
-    /* border: 2px solid red; */
 }
 
 #introduction h3 span:nth-of-type(1){
@@ -33,7 +32,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* border: 2px solid red; */
 }
 
 #introduction h3:hover{

@@ -7,17 +7,17 @@
     background: rgba(34, 34, 34, 0.75);
 }
 
-/* #aboutMe{
+#aboutMe{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     row-gap: 25px;
-} */
+}
 
 #aboutMe span{
     margin-top: -49px;
-    margin-left: 17px;
+    /* margin-left: 17px; */
     padding: 5px;
     background: #111111;
     box-sizing: border-box;
@@ -27,12 +27,6 @@
     display: block;
     width: 13ch;
     text-align: center;
-}
-
-#aboutP{
-    /* border: 2px solid red; */
-    position: relative;
-    top: 13px;
 }
 
 #aboutMe span p, #aboutMe p{
@@ -59,6 +53,7 @@
     #aboutP{
         font-size: larger;
         aspect-ratio: 1.16;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -77,5 +72,7 @@
 @media only screen and (min-width: 1252px){
     #aboutP{
         line-height: 40px;
+        /* width: 100%; */
+        aspect-ratio: 1.14;
     }
 }

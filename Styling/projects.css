@@ -15,7 +15,7 @@
 
 #myProjects span{
     margin-top: -40px;
-    margin-left: -40px;
+    /* margin-left: -40px; */
     width: 13ch;
     text-align: center;
     font-size: larger;

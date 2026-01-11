@@ -14,15 +14,18 @@
 }
 
 #contacts span{
-    /* position: relative; */
     margin-top: -40px;
-    margin-left: -38px;
+    /* margin-left: -38px; */
     font-size: larger;
     padding: 5px;
     background: #111111;
     text-align: center;
     border: 2px solid #444444;
     border-radius: 0.5rem 0.25rem 0.5rem 0.25rem;
+}
+
+#contacts span p{
+    padding: 0 10px 0 10px;
 }
 
 #contacts span p, #contacts p{
@@ -52,4 +55,16 @@
     #contacts p{
         font-size: larger;
     }
+}
+
+#contactHTML{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#contactHtml > section{
+    border: 2px solid red;
 }
