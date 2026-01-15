@@ -38,40 +38,40 @@
 
 .cubeSide:nth-of-type(1){
     transform: translateZ(105px);
-    background: url(../Assets/BA4.jpg) center center no-repeat;
+    background: url(../Assets/Cube/BA4.jpg) center center no-repeat;
     background-size: cover;
     filter: brightness(0.8);
 }
 
 .cubeSide:nth-of-type(6){
     transform: translateZ(-105px) rotateX(180deg);
-    background: url(../Assets/BA.png) center center no-repeat;
+    background: url(../Assets/Cube/BA.png) center center no-repeat;
     background-size: cover;
 }
 
 .cubeSide:nth-of-type(2){
     transform: translateY(105px) rotateX(-90deg);
-    background: url(../Assets/BA1.jpg) center center no-repeat;
+    background: url(../Assets/Cube/BA1.jpg) center center no-repeat;
     background-size: cover;
     filter: brightness(0.8);
 }
 
 .cubeSide:nth-of-type(3){
     transform: translateY(-105px) rotateX(90deg) rotateZ(180deg);
-    background: url(../Assets/BA2.jpg) center center no-repeat;
+    background: url(../Assets/Cube/BA2.jpg) center center no-repeat;
     background-size: cover;
     filter: brightness(0.8);
 }
 
 .cubeSide:nth-of-type(4){
     transform: translateX(-105px) rotateY(-90deg);
-    background: url(../Assets/BA3.jpg) center center no-repeat;
+    background: url(../Assets/Cube/BA3.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .cubeSide:nth-of-type(5){
     transform: translateX(105px) rotateY(90deg) rotateZ(-90deg);
-    background: url(../Assets/AA.jpg) center center no-repeat;
+    background: url(../Assets/Cube/AA.jpg) center center no-repeat;
     background-size: cover;
     filter: brightness(1.2);
 }
