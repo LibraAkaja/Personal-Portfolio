@@ -22,9 +22,8 @@ footer p{
     margin-bottom: 4px;
 }
 
-footer p:nth-of-type(1){
+footer p{
     text-decoration: underline #444444;
-
 }
 
 footer h3{
@@ -34,6 +33,7 @@ footer h3{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
+    user-select: none;
 }
 
 @media only screen and (min-width: 375px){

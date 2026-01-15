@@ -121,7 +121,7 @@ nav.scrolled{
     .siteLogo{
         width: 11%;
     }
-    h1{
+    nav h1{
         display: none;
     }
     nav section{

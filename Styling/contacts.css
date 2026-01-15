@@ -59,12 +59,80 @@
 
 #contactHTML{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+}
+
+#contactHtmlH1{
+    margin-top: 125px;
+    position: fixed;
+    transition: all 0.4s ease;
 }
 
 #contactHtml > section{
-    border: 2px solid red;
+    border: 2px solid #333333;
+    border-radius: 1.3rem;
+    background: rgba(51, 51, 51, 0.5);
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#contactHtml > section  a{
+    all: unset;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#contactHtml > section img{
+    width: 50px;
+}
+
+#contactHtml > section p{
+    height: min-content;
+    color: white;
+    align-self: center;
+    font-size: large;
+}
+
+.socials.hide{
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.4s ease;
+}
+
+.socials.show{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.4s ease;
+}
+
+#contactHtml > section:hover{
+    background: rgba(68, 68, 68, 0.5);
+}
+
+@media only screen and (min-width: 768px){
+    #contactHtml{
+        width: 60vw;
+        flex-direction: column;
+        margin-top: 313px !important;
+    }
+    .socials{
+        min-width: 100% !important;
+        min-height: 75px !important;
+    }
+    #contactHtmlH1{
+        margin-top: 200px;
+        font-size: xx-large;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #contactHtml{
+        width: 31vw;
+    }
 }
