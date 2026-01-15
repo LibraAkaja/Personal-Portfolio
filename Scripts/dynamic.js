@@ -61,3 +61,8 @@ export function isCSS(e,prop, val){
 export function removeElements(arr){
     arr.forEach(e => document.querySelector(e).remove());
 }
+
+/*Function to check if an HTML element exists*/
+export function isThere(el){
+    return (document.querySelector(el));
+}
