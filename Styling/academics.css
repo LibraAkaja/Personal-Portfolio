@@ -55,3 +55,16 @@
         font-size: larger;
     }
 }
+
+#academicsHtmlH1{
+    margin-top: 125px;
+    position: fixed;
+    transition: all 0.4s ease;
+}
+
+@media only screen and (min-width: 768px){
+    #academicsHtmlH1{
+        margin-top: 200px;
+        font-size: xx-large;
+    }
+}
