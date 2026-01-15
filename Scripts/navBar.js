@@ -1,4 +1,4 @@
-import { changeCSS } from "./dynamic.js";
+import { changeCSS, isThere } from "./dynamic.js";
 
 const hamburgerMenu = document.querySelector("nav img");
 
@@ -13,6 +13,7 @@ function closeMenu(){
     changeCSS("nav", "padding-top", "0px");
     changeCSS("nav section", "display", "none");
     changeCSS("main","transform","translateY(0px)")
+    if(isThere("#contactHtmlH1")) changeCSS("#contactHtmlH1","transform","translateY(0px)");
     clicked = false;
     return;
 }
@@ -22,13 +23,13 @@ hamburgerMenu.addEventListener("click", ()=>{
         const displayWidth = checkDisplayWidth();
         const handleCubeAnimationAccWidth = 
                                     (displayWidth < 375)
-                                    ? ()=>  {changeCSS("main","transform","translateY(263px)");}
+                                    ? ()=>  {changeCSS("main","transform","translateY(263px)");if(isThere("#contactHtmlH1")) changeCSS("#contactHtmlH1","transform","translateY(263px)");}
                                     :   (displayWidth < 425)
-                                        ?   ()=>    {changeCSS("main","transform","translateY(250px)");}
+                                        ?   ()=>    {changeCSS("main","transform","translateY(250px)");if(isThere("#contactHtmlH1")) changeCSS("#contactHtmlH1","transform","translateY(250px)");}
                                         :   (displayWidth > 424 && displayWidth < 648)
-                                            ?   ()=>    {changeCSS("main","transform","translateY(251px)");}
+                                            ?   ()=>    {changeCSS("main","transform","translateY(251px)");if(isThere("#contactHtmlH1")) changeCSS("#contactHtmlH1","transform","translateY(251px)");}
                                             :   (displayWidth > 647 && displayWidth < 768)
-                                                ?   ()=>    {changeCSS("main","transform","translateY(182px)");}
+                                                ?   ()=>    {changeCSS("main","transform","translateY(182px)");if(isThere("#contactHtmlH1")) changeCSS("#contactHtmlH1","transform","translateY(182px)");}
                                                 : ()=> {};
         handleCubeAnimationAccWidth();
         setTimeout(()=>{        

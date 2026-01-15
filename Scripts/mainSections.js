@@ -31,10 +31,16 @@ const cubeObserver = createObserver({
     removeClass: "hide"
 });
 
-document.querySelectorAll(".detailCategory").forEach((el)=> {
-    sectionObserver.observe(el);
+const socialObserver = createObserver({
+    rootMargin: "-242px 0px -80px 0px",
+    addClass: "show",
+    removeClass: "hide"
 });
 
-document.querySelectorAll(".cube").forEach((el)=>{
-    cubeObserver.observe(el);
-});
+if(document.querySelector("#cube")){
+    document.querySelectorAll(".detailCategory").forEach((el)=> {sectionObserver.observe(el);});
+    document.querySelectorAll(".cube").forEach((el)=>{cubeObserver.observe(el);});
+}
+if(document.querySelector("#LinkedIn")){
+    document.querySelectorAll(".socials").forEach((el)=>{socialObserver.observe(el)});
+}
