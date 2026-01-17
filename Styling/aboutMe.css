@@ -17,7 +17,6 @@
 
 #aboutMe span{
     margin-top: -49px;
-    /* margin-left: 17px; */
     padding: 5px;
     background: #111111;
     box-sizing: border-box;
@@ -72,7 +71,6 @@
 @media only screen and (min-width: 1252px){
     #aboutP{
         line-height: 40px;
-        /* width: 100%; */
         aspect-ratio: 1.14;
     }
 }

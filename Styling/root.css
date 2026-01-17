@@ -50,6 +50,15 @@ main{
     user-select: none;
 }
 
+.hOne, .otherpage p, .otherPage h2{
+    user-select: none;
+}
+
+.hOne.scrolled{
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
 @media only screen and (min-width: 375px){
     main{
         margin-top: 172px;
@@ -90,5 +99,8 @@ main{
     }
     main > section:nth-of-type(3), main > section:nth-of-type(4), main > section:nth-of-type(5), main > section:nth-of-type(6){
         max-width: 35%;
+    }
+    .sectionP{
+        font-size: x-large !important;
     }
 }
