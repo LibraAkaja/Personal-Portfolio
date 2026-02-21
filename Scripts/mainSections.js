@@ -43,6 +43,12 @@ const socialObserver = createObserver({
     removeClass: "hide"
 });
 
+const projectObserver = createObserver({
+    rootMargin: "-400px 0px -100px 0px",
+    addClass: "show",
+    removeClass: "hide"
+});
+
 /* Activate animation */
 
 if(document.querySelector("#cube")){
@@ -54,6 +60,9 @@ if(document.querySelector("#LinkedIn")){
 }
 if(document.querySelector("#lsa")){
     document.querySelectorAll(".institute").forEach((el)=>{instituteObserver.observe(el)});
+}
+if(document.querySelector("#qrrg")){
+    document.querySelectorAll(".project").forEach((el)=>{projectObserver.observe(el)});
 }
 
 
