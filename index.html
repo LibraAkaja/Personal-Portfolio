@@ -33,11 +33,11 @@
         <img src="Assets/settings.png" width="30px">
         <section>
             <div class="navItem"><a href="#aboutMe"><span>About</span></a></div>
-            <div class="navItem"><a href="#academics"><span>Academics</span></a></div>
-            <div class="navItem"><a href="#skills"><span>Skills</span></a></div>
+            <div class="navItem"><a href="Pages/academics.html"><span>Academics</span></a></div>
+            <div class="navItem"><a href="Pages/projects.html"><span>Projects</span></a></div>
             <div class="navItem"><a href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a></div>
-            <div class="navItem"><a href="#myBlog"><span>Blog</span></a></div>
-            <div class="navItem"><a href="#contacts"><span>Contact</span></a></div>
+            <div class="navItem"><a href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a></div>
+            <div class="navItem"><a href="Pages/contact.html"><span>Contact</span></a></div>
         </section>
     </nav>
     <main id="root">
@@ -52,44 +52,44 @@
             </div>
         </section>
         <section id="introduction" class="detailCategory">
-            <h3><span>Frontend </span><span>Developer</span></h3><br>
+            <h3><span>Web </span><span>Developer</span></h3><br>
             <p>Hi! I'm Biraj, a Computer Engineering student at Thapathali Campus, Kathmandu.
                 I'm currently into Web Design and Development.
             </p>
         </section>
         <section id="aboutMe" class="detailCategory">
             <span><p>About Me</p></span>
-            <p>I started building web projects during my second year of college, which sparked my interest in creating clean, user-friendly interfaces. Since then, I've focused on writing scalable code and continuously improving my problem-solving skills.</p>
+            <p id="aboutP">I started building web projects during my second year of college, which sparked my interest in creating clean, user-friendly interfaces. Since then, I've focused on writing scalable code and continuously improving my problem-solving skills.</p>
         </section>
         <section id="academics" class="detailCategory">
             <span><p>Academics</p></span>
             <img src="Assets/education.png" width="200">
-            <p>See my academic qualification </p>
-            <img src="Assets/right.png" width="30px">
+            <p class="sectionP">See my academic journey </p>
+            <a href="Pages/academics.html"><img src="Assets/right.png" width="30px"></a>
         </section>
         <section id="myProjects" class="detailCategory">
             <span><p>Projects</p></span>
             <img src="Assets/project.png" width="200">
-            <p>Explore my projects </p>
-            <img src="Assets/right.png" width="30px">
+            <p class="sectionP">Explore my projects </p>
+            <a href="Pages/projects.html"><img src="Assets/right.png" width="30px"></a>
         </section>
         <section id="myBlog" class="detailCategory">
             <span><p>Blog</p></span>
             <img src="Assets/blog.png" width="200px">
-            <p>Dive into my Blog posts</p>
-            <img src="Assets/right.png" width="30px">
+            <p class="sectionP">Dive into my Blog posts</p>
+            <a href="" onclick="alert('I do not have a blog yet')"><img src="Assets/right.png" width="30px"></a>
         </section>
         <section id="contacts" class="detailCategory">
-            <span><p>Socials and Contact</p></span>
+            <span><p>Socials/Contact</p></span>
             <img src="Assets/network.png" width="200">
-            <p>Contact me via these platforms</p>
-            <img src="Assets/right.png" width="30px">
+            <p class="sectionP">Contact me via these platforms</p>
+            <a href="Pages/contact.html"><img src="Assets/right.png" width="30px"></a>
         </section>
     </main>
     <footer>
         <h3>Biraj Adhikari</h3>
         <p><a href="mailto:adhikaribiraj908@gmail.com" target="_blank">adhikaribiraj908@gmail.com</a></p>
-        <p>+977-9767645497</p>
+        <p><a href="tel:+9779767645497">+977-9767645497</a></p>
     </footer>
     <script src="Scripts/dynamic.js"></script>
     <script src="Scripts/navBar.js" type="module"></script>

@@ -31,10 +31,44 @@ const cubeObserver = createObserver({
     removeClass: "hide"
 });
 
-document.querySelectorAll(".detailCategory").forEach((el)=> {
-    sectionObserver.observe(el);
+const instituteObserver = createObserver({
+    rootMargin: "-400px 0px -100px 0px",
+    addClass: "show",
+    removeClass: "hide"
+})
+
+const socialObserver = createObserver({
+    rootMargin: "-242px 0px -80px 0px",
+    addClass: "show",
+    removeClass: "hide"
 });
 
-document.querySelectorAll(".cube").forEach((el)=>{
-    cubeObserver.observe(el);
+const projectObserver = createObserver({
+    rootMargin: "-400px 0px -100px 0px",
+    addClass: "show",
+    removeClass: "hide"
 });
+
+/* Activate animation */
+
+if(document.querySelector("#cube")){
+    document.querySelectorAll(".detailCategory").forEach((el)=> {sectionObserver.observe(el);});
+    document.querySelectorAll(".cube").forEach((el)=>{cubeObserver.observe(el);});
+}
+if(document.querySelector("#LinkedIn")){
+    document.querySelectorAll(".socials").forEach((el)=>{socialObserver.observe(el)});
+}
+if(document.querySelector("#lsa")){
+    document.querySelectorAll(".institute").forEach((el)=>{instituteObserver.observe(el)});
+}
+if(document.querySelector("#qrrg")){
+    document.querySelectorAll(".project").forEach((el)=>{projectObserver.observe(el)});
+}
+
+
+import { hOneAccPage, hStatus } from "./navBar.js";
+if(hStatus){
+    window.addEventListener("scroll",()=>{
+        document.querySelector(hOneAccPage).classList.toggle("scrolled",window.scrollY > 40);
+    });
+}

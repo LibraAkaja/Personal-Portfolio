@@ -69,7 +69,7 @@ h1{
 #pp{
     width: 30px;
     aspect-ratio: 1;
-    background: url(../Assets/BA.png) center center no-repeat;
+    background: url(../Assets/Cube/BA.png) center center no-repeat;
     background-size: cover;
     border: 1px solid white;
     border-radius: 50%;
@@ -121,7 +121,7 @@ nav.scrolled{
     .siteLogo{
         width: 11%;
     }
-    h1{
+    nav h1{
         display: none;
     }
     nav section{
@@ -157,7 +157,7 @@ nav.scrolled{
 
 @media only screen and (min-width: 1024px){
     h1{
-        display: block;
+        display: block !important;
     }
     .siteLogo{
         width: 24%;

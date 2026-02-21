@@ -34,12 +34,29 @@ main{
 .detailCategory {
     opacity: 0;
     transform: translateY(12px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    transition: all 0.4s ease;
 }
 
-.detailCategory.show {
+#introduction:hover, #aboutMe:hover, #academics:hover, #myProjects:hover, #myBlog:hover, #contacts:hover{
+    background: rgba(68, 68, 68, 0.5);
+}
+
+.detailCategory.show{
     opacity: 1;
     transform: translateY(0);
+}
+
+#root > section h3, #root > section p{
+    user-select: none;
+}
+
+.hOne, .otherpage p, .otherPage h2{
+    user-select: none;
+}
+
+.hOne.scrolled{
+    opacity: 0;
+    transform: translateY(-40px);
 }
 
 @media only screen and (min-width: 375px){
@@ -82,5 +99,8 @@ main{
     }
     main > section:nth-of-type(3), main > section:nth-of-type(4), main > section:nth-of-type(5), main > section:nth-of-type(6){
         max-width: 35%;
+    }
+    .sectionP{
+        font-size: x-large !important;
     }
 }
