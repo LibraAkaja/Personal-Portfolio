@@ -15,7 +15,6 @@
 
 #myProjects span{
     margin-top: -40px;
-    /* margin-left: -40px; */
     width: 13ch;
     text-align: center;
     font-size: larger;
@@ -64,5 +63,166 @@
     #projectsHtmlH1{
         margin-top: 200px;
         font-size: xx-large;
+    }
+}
+
+#projectsHtml{
+    margin-top: 200px;
+    gap: 0;
+}
+
+#projectsHtmlH1{
+    margin-top: 125px;
+    position: fixed;
+    transition: all 0.4s ease;
+}
+
+#projectsHtml img{
+    width: 100%;
+    border: 2px solid #444444;
+    border-radius: 0.75rem 0.15rem 0.75rem 0.15rem;
+}
+
+.project{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 8px;
+    border: 2px solid #444444;
+    border-radius: 1rem 0.25rem 1rem 0.25rem;
+    background: rgba(34, 34, 34, 0.75);
+    margin-bottom: 50px;
+    /* scale: 0.8; */
+}
+
+.project:hover{
+    background: rgba(68, 68, 68, 0.5);
+}
+
+.project span{
+    margin-top: 13px;
+}
+
+.project h2,.project h3{
+    background: linear-gradient(to right, white, grey, brown);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project h2:hover{
+    background: linear-gradient(to right, skyblue, crimson);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project p{
+    color: white;
+    margin-top: 8px;
+    margin-bottom: 13px;
+}
+
+.project.hide{
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.4s ease;
+}
+
+.project.show{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.4s ease;
+}
+
+.project a{
+    all: unset;
+    color: orange;
+    text-align: end;
+    padding: 8px;
+    border: 2px solid #444444;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 0.4s ease;
+    will-change: text;
+    /* margin-top: 450px; */
+}
+
+.project a:hover{
+    background: orange;
+    color: black;
+    scale: 1.05;
+}
+
+@media only screen and (min-width: 425px){
+    #projectsHtml{
+        width: 375px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    
+    #projectsHtml{
+        flex-direction: column;
+        margin-top: 313px !important;
+    }
+    #projectsHtmlH1{
+        margin-top: 200px;
+        font-size: xx-large;
+    }
+    .project{
+        min-width: 100% !important;
+        min-height: 75px !important;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #projectsHtml{
+        flex-direction: column;
+        width: 80vw;
+    }
+    .project{
+        min-width: 50% !important;
+        max-width: 80% !important;
+        min-height: 220px !important;
+    }
+    .project span{
+        margin: 0px 0px 0px 25px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .project h2{
+        font-size: xx-large;
+    }
+    .project p{
+        font-size: larger;
+        margin-bottom: 0px;
+    }
+    #lyricsfilemaker{
+        align-self: flex-start;
+    }
+    #qrrg{
+        align-self: flex-end;
+    }
+    #decisionlog{
+        align-self: flex-start;
+    }
+    #citysewa{
+        align-self: flex-end;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .project{
+        max-width: 60% !important;
+    }
+    .project span{
+        height: 251px;
     }
 }
