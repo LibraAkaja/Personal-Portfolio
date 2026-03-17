@@ -28,16 +28,31 @@
         <div class="decorator"></div>
         <div class="decorator"></div>
     </section>
-    <nav>
-        <div class="siteLogo"><div id="pp"></div><h1>Biraj Adhikari</h1></div>
-        <img src="Assets/settings.png" width="30px">
-        <section>
-            <div class="navItem"><a href="#aboutMe"><span>About</span></a></div>
-            <div class="navItem"><a href="Pages/academics.html"><span>Academics</span></a></div>
-            <div class="navItem"><a href="Pages/projects.html"><span>Projects</span></a></div>
-            <div class="navItem"><a href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a></div>
-            <div class="navItem"><a href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a></div>
-            <div class="navItem"><a href="Pages/contact.html"><span>Contact</span></a></div>
+    <nav class="navbar">
+        <section class="nav-logo-section">
+            <div class="siteLogo"></div>
+            <h1>Biraj Adhikari</h1>
+        </section>
+        <button type="button" class="hamburger" aria-label="Menu">
+            <img src="Assets/settings.png" width="30"/>
+        </button>
+        <section class="nav-menu" id="desktop-menu">
+            <a class="navItem" href="#aboutMe"><span>About</span></a>
+            <a class="navItem" href="Pages/academics.html"><span>Academics</span></a>
+            <a class="navItem" href="Pages/projects.html"><span>Projects</span></a>
+            <a class="navItem" href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a>
+            <a class="navItem" href="#" onclick="alert('I do not have a blog yet')"><span>Blog</span></a>
+            <a class="navItem" href="Pages/contact.html"><span>Contact</span></a>
+            <img src="Assets/dark.png" width="40" class="themeProvider"/>
+        </section>
+        <section class="nav-menu" id="handheld-menu">
+            <a class="navItem" href="#aboutMe"><span>About</span></a>
+            <a class="navItem" href="Pages/academics.html"><span>Academics</span></a>
+            <a class="navItem" href="Pages/projects.html"><span>Projects</span></a>
+            <a class="navItem" href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a>
+            <a class="navItem" href="#" onclick="alert('I do not have a blog yet')"><span>Blog</span></a>
+            <a class="navItem" href="Pages/contact.html"><span>Contact</span></a>
+            <img src="Assets/dark.png" width="40" class="themeProvider"/>
         </section>
     </nav>
     <main id="root">
@@ -53,7 +68,7 @@
         </section>
         <section id="introduction" class="detailCategory">
             <h3><span>Web </span><span>Developer</span></h3><br>
-            <p>Hi! I'm Biraj, a Computer Engineering student at Thapathali Campus, Kathmandu.
+            <p>Hi! I'm Biraj, studying Computer Engineering at Thapathali Campus, Kathmandu.
                 I'm currently into Web Design and Development.
             </p>
         </section>
@@ -63,25 +78,25 @@
         </section>
         <section id="academics" class="detailCategory">
             <span><p>Academics</p></span>
-            <img src="Assets/education.png" width="200">
+            <img src="Assets/education.png" width="200"/>
             <p class="sectionP">See my academic journey </p>
             <a href="Pages/academics.html"><img src="Assets/right.png" width="30px"></a>
         </section>
         <section id="myProjects" class="detailCategory">
             <span><p>Projects</p></span>
-            <img src="Assets/project.png" width="200">
+            <img src="Assets/project0.png" width="200"/>
             <p class="sectionP">Explore my projects </p>
             <a href="Pages/projects.html"><img src="Assets/right.png" width="30px"></a>
         </section>
         <section id="myBlog" class="detailCategory">
             <span><p>Blog</p></span>
-            <img src="Assets/blog.png" width="200px">
+            <img src="Assets/blog0.png" width="200px"/>
             <p class="sectionP">Dive into my Blog posts</p>
             <a href="" onclick="alert('I do not have a blog yet')"><img src="Assets/right.png" width="30px"></a>
         </section>
         <section id="contacts" class="detailCategory">
             <span><p>Socials/Contact</p></span>
-            <img src="Assets/network.png" width="200">
+            <img src="Assets/social0.png" width="200"/>
             <p class="sectionP">Contact me via these platforms</p>
             <a href="Pages/contact.html"><img src="Assets/right.png" width="30px"></a>
         </section>
@@ -91,7 +106,8 @@
         <p><a href="mailto:adhikaribiraj908@gmail.com" target="_blank">adhikaribiraj908@gmail.com</a></p>
         <p><a href="tel:+9779767645497">+977-9767645497</a></p>
     </footer>
-    <script src="Scripts/dynamic.js"></script>
+    <script src="Scripts/dynamic.js" type="module"></script>
+    <script src="Scripts/themeProvider.js" type="module"></script>
     <script src="Scripts/navBar.js" type="module"></script>
     <script src="Scripts/dragCube.js" type="module"></script>
     <script src="Scripts/mainSections.js" type="module"></script>

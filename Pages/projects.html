@@ -18,16 +18,31 @@
         <div class="decorator"></div>
         <div class="decorator"></div>
     </section>
-    <nav>
-        <div class="siteLogo"><a href="../index.html" style="all: unset; display: flex; justify-content: center; align-items: center; column-gap: 8px;"><div id="pp"></div><h1>Biraj Adhikari</h1></a></div>
-        <img src="../Assets/settings.png" width="30px">
-        <section>
-            <div class="navItem"><a href="../index.html#aboutMe"><span>About</span></a></div>
-            <div class="navItem"><a href="../Pages/academics.html"><span>Academics</span></a></div>
-            <div class="navItem"><a href=""><span>Projects</span></a></div>
-            <div class="navItem"><a href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a></div>
-            <div class="navItem"><a href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a></div>
-            <div class="navItem"><a href="../Pages/contact.html"><span>Contact</span></a></div>
+    <nav class="navbar">
+        <section class="nav-logo-section">
+            <div class="siteLogo"></div>
+            <h1>Biraj Adhikari</h1>
+        </section>
+        <button type="button" class="hamburger" aria-label="Menu">
+            <img src="../Assets/settings.png" width="30"/>
+        </button>
+        <section class="nav-menu" id="desktop-menu">
+            <a class="navItem" href="../index.html#aboutMe"><span>About</span></a>
+            <a class="navItem" href="../Pages/academics.html"><span>Academics</span></a>
+            <a class="navItem" href=""><span>Projects</span></a></div>
+            <a class="navItem" href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a>
+            <a class="navItem" href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a>
+            <a class="navItem" href="../Pages/contact.html"><span>Contact</span></a>
+            <img src="../Assets/dark.png" width="40" class="themeProvider"/>
+        </section>
+        <section class="nav-menu" id="handheld-menu">
+            <a class="navItem" href="../index.html#aboutMe"><span>About</span></a>
+            <a class="navItem" href="../Pages/academics.html"><span>Academics</span></a>
+            <a class="navItem" href=""><span>Projects</span></a>
+            <a class="navItem" href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a>
+            <a class="navItem" href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a>
+            <a class="navItem" href="../Pages/contact.html"><span>Contact</span></a>
+            <img src="../Assets/dark.png" width="40" class="themeProvider"/>
         </section>
     </nav>
     <h1 id="projectsHtmlH1" class="hOne">Explore my Projects</h1>
@@ -74,6 +89,7 @@
             <a href="https://github.com/LibraAkaja/" target="_blank">GitHub</a>
         </section>
     </main>
+    <script src="../Scripts/themeProvider.js" type="module"></script>
     <script src="../Scripts/navBar.js" type="module"></script>
     <script src="../Scripts/mainSections.js" type="module"></script>
 </body>
