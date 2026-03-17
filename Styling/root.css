@@ -1,3 +1,93 @@
+:root {
+    --bg-body: #f8fafc;
+    --bg-div: #ffffff;
+    --bg-span: #f1f5f9;
+    --bg-btn: #e2e8f0;
+
+    --border-color: #e2e8f0;
+
+    --hover-div: #eef2f7;
+    --hover-btn: #6366f1;
+
+    --a-text: #6366f1;            
+    --a-text-hover: #0f172a;
+
+    --p-color: #0f172a;
+
+    --gradient: linear-gradient(to right, #6366f1, #3b82f6, #06b6d4);
+    --gradient-hover: linear-gradient(to right, #4f46e5, #2563eb);
+
+    --border-cube: #6366f1;
+
+    --bg-decor: rgba(99, 102, 241, 0.06);
+
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-border: #e2e8f0;
+    --nav-text: #0f172a;
+    --nav-hover-bg: #f1f5f9;
+    --nav-accent: #6366f1;
+}
+
+:root[data-theme="light"]{
+    --bg-body: #f8fafc;
+    --bg-div: #ffffff;
+    --bg-span: #f1f5f9;
+    --bg-btn: #e2e8f0;
+
+    --border-color: #e2e8f0;
+
+    --hover-div: #eef2f7;
+    --hover-btn: #6366f1;
+
+    --a-text: #6366f1;             
+    --a-text-hover: #0f172a;
+
+    --p-color: #0f172a;
+
+    --gradient: linear-gradient(to right, #6366f1, #3b82f6, #06b6d4);
+    --gradient-hover: linear-gradient(to right, #4f46e5, #2563eb);
+
+    --border-cube: #6366f1;
+
+    --bg-decor: rgba(99, 102, 241, 0.06);
+
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-border: #e2e8f0;
+    --nav-text: #0f172a;
+    --nav-hover-bg: #f1f5f9;
+    --nav-accent: #6366f1;
+}
+
+:root[data-theme="dark"]{
+    --bg-body: #0f172a;
+    --bg-div: #1e293b;
+    --bg-span: #020617;
+    --bg-btn: #334155;
+
+    --border-color: #334155;
+
+    --hover-div: #2b3545;
+    --hover-btn: #818cf8;
+
+    --a-text: #818cf8;           
+    --a-text-hover: #ffffff;
+
+    --p-color: #e2e8f0;
+
+    --gradient: linear-gradient(to right, #818cf8, #38bdf8, #22c55e);
+    --gradient-hover: linear-gradient(to right, #6366f1, #0ea5e9);
+
+    --border-cube: #818cf8;
+
+    --bg-decor: rgba(129, 140, 248, 0.07);
+
+    --nav-bg: rgba(15, 23, 42, 0.8);
+    --nav-border: #334155;
+    --nav-text: #e2e8f0;
+    --nav-hover-bg: #1e293b;
+    --nav-accent: #818cf8;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -6,7 +96,7 @@
 }
 
 body, html{
-    background-color: #000000;
+    background-color: var(--bg-body);
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -37,8 +127,23 @@ main{
     transition: all 0.4s ease;
 }
 
+#introduction, #aboutMe, #academics, #myProjects, #myBlog, #contacts{
+    background: var(--bg-div);
+}
+
 #introduction:hover, #aboutMe:hover, #academics:hover, #myProjects:hover, #myBlog:hover, #contacts:hover{
-    background: rgba(68, 68, 68, 0.5);
+    background: var(--hover-div);
+}
+
+#contactHtmlH1, #academicsHtmlH1, #projectsHtmlH1{
+    background: var(--gradient);
+    background-clip: text;
+    color: transparent;
+}
+
+#contactHtmlH1:hover, #academicsHtmlH1:hover, #projectsHtmlH1:hover{
+    background: var(--gradient-hover);
+    background-clip: text;
 }
 
 .detailCategory.show{

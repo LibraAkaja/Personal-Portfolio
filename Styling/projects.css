@@ -1,8 +1,36 @@
+:root[data-theme="light"]{
+    --bg-div: #ffffff;
+    --bg-span: #f1f5f9;
+    --bg-btn: #e2e8f0;
+    --border-color: #e2e8f0;
+    --hover-div: #eef2f7;
+    --hover-btn: #6366f1;
+    --a-text: #6366f1;             
+    --a-text-hover: #0f172a;
+    --p-color: #0f172a;
+    --gradient: linear-gradient(to right, #6366f1, #3b82f6, #06b6d4);
+    --gradient-hover: linear-gradient(to right, #4f46e5, #2563eb);
+}
+
+:root[data-theme="dark"]{
+    --bg-div: #1e293b;
+    --bg-span: #020617;
+    --bg-btn: #334155;
+    --border-color: #334155;
+    --hover-div: #2b3545;
+    --hover-btn: #818cf8;
+    --a-text: #818cf8;           
+    --a-text-hover: #ffffff;
+    --p-color: #e2e8f0;
+    --gradient: linear-gradient(to right, #818cf8, #38bdf8, #22c55e);
+    --gradient-hover: linear-gradient(to right, #6366f1, #0ea5e9);
+}
+
 #myProjects{
     width: 90vw;
     box-sizing: border-box;
     padding: 25px 25px 50px 25px;
-    border: 2px solid #444444;
+    border: 2px solid var(--border-color);
     border-radius: 1rem 0.25rem 1rem 0.25rem;
     display: flex;
     justify-content: center;
@@ -10,7 +38,6 @@
     flex-direction: column;
     row-gap: 25px;
     color: white;
-    background: rgba(34, 34, 34, 0.75);
 }
 
 #myProjects span{
@@ -19,20 +46,20 @@
     text-align: center;
     font-size: larger;
     padding: 5px;
-    background: #111111;
-    border: 2px solid #444444;
+    background: var(--bg-span);
+    border: 2px solid var(--border-color);
     border-radius: 0.5rem 0.25rem 0.5rem 0.25rem;
 }
 
 #myProjects span p, #myProjects p{
-    background: linear-gradient(to right, white, grey, brown);
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #myProjects span p:hover, #myProjects p:hover{
-    background: linear-gradient(to right, skyblue, crimson);
+    background: var(--gradient-hover);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -79,7 +106,7 @@
 
 #projectsHtml img{
     width: 100%;
-    border: 2px solid #444444;
+    border: 2px solid var(--border-color);
     border-radius: 0.75rem 0.15rem 0.75rem 0.15rem;
 }
 
@@ -91,15 +118,14 @@
     justify-content: space-evenly;
     align-items: center;
     row-gap: 8px;
-    border: 2px solid #444444;
+    border: 2px solid var(--border-color);
     border-radius: 1rem 0.25rem 1rem 0.25rem;
-    background: rgba(34, 34, 34, 0.75);
+    background: var(--bg-div);
     margin-bottom: 50px;
-    /* scale: 0.8; */
 }
 
 .project:hover{
-    background: rgba(68, 68, 68, 0.5);
+    background: var(--hover-div);
 }
 
 .project span{
@@ -107,21 +133,21 @@
 }
 
 .project h2,.project h3{
-    background: linear-gradient(to right, white, grey, brown);
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .project h2:hover{
-    background: linear-gradient(to right, skyblue, crimson);
+    background: var(--gradient-hover);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .project p{
-    color: white;
+    color: var(--p-color);
     margin-top: 8px;
     margin-bottom: 13px;
 }
@@ -140,21 +166,21 @@
 
 .project a{
     all: unset;
-    color: orange;
+    color: var(--a-text);
     text-align: end;
     padding: 8px;
-    border: 2px solid #444444;
+    border: 2px solid var(--border-color);
     border-radius: 0.5rem;
     cursor: pointer;
     width: fit-content;
     transition: all 0.4s ease;
     will-change: text;
-    /* margin-top: 450px; */
+    background: var(--bg-btn);
 }
 
 .project a:hover{
-    background: orange;
-    color: black;
+    background: var(--hover-btn);
+    color: var(--a-text-hover);
     scale: 1.05;
 }
 

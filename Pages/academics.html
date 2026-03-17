@@ -18,49 +18,65 @@
         <div class="decorator"></div>
         <div class="decorator"></div>
     </section>
-    <nav>
-        <div class="siteLogo"><a href="../index.html" style="all: unset; display: flex; justify-content: center; align-items: center; column-gap: 8px;"><div id="pp"></div><h1>Biraj Adhikari</h1></a></div>
-        <img src="../Assets/settings.png" width="30px">
-        <section>
-            <div class="navItem"><a href="../index.html#aboutMe"><span>About</span></a></div>
-            <div class="navItem"><a href=""><span>Academics</span></a></div>
-            <div class="navItem"><a href="../Pages/projects.html"><span>Projects</span></a></div>
-            <div class="navItem"><a href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a></div>
-            <div class="navItem"><a href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a></div>
-            <div class="navItem"><a href="../Pages/contact.html"><span>Contact</span></a></div>
+    <nav class="navbar">
+        <section class="nav-logo-section">
+            <div class="siteLogo"></div>
+            <h1>Biraj Adhikari</h1>
+        </section>
+        <button type="button" class="hamburger" aria-label="Menu">
+            <img src="../Assets/settings.png" width="30"/>
+        </button>
+        <section class="nav-menu" id="desktop-menu">
+            <a class="navItem" href="../index.html#aboutMe"><span>About</span></a>
+            <a class="navItem" href=""><span>Academics</span></a>
+            <a class="navItem" href="../Pages/projects.html"><span>Projects</span></a>
+            <a class="navItem" href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a>
+            <a class="navItem" href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a>
+            <a class="navItem" href="../Pages/contact.html"><span>Contact</span></a>
+            <img src="../Assets/dark.png" width="40" class="themeProvider"/>
+        </section>
+        <section class="nav-menu" id="handheld-menu">
+            div class="navItem"><a href="../index.html#aboutMe"><span>About</span></a>
+            <a class="navItem" href=""><span>Academics</span></a>
+            <a class="navItem" href="../Pages/projects.html"><span>Projects</span></a>
+            <a class="navItem" href="https://github.com/LibraAkaja/" target="_blank"><span>GitHub</span></a>
+            <a class="navItem" href="" onclick="alert('I do not have a blog yet')"><span>Blog</span></a>
+            <a class="navItem" href="../Pages/contact.html"><span>Contact</span></a>
+            <img src="../Assets/dark.png" width="40" class="themeProvider"/>
         </section>
     </nav>
     <h1 id="academicsHtmlH1" class="hOne">My Academic Journey</h1>
     <main id="academicsHtml" class="otherPage">
         <section class="institute" id="innovative">
-            <img src="../Assets/Academic/Innovative.jpg" alt="Innovative English School">
+            <img src="../Assets/Academic/Innovative.jpg" alt="Innovative English School"/>
             <span>
                 <h2>Innovative English School</h2>
                 <p>This is the place where I studied from Grade 1 to Grade 7.</p>
             </span>
         </section>
         <section class="institute" id="lsa">
-            <img src="../Assets/Academic/LSA.jpg" alt="Little Stars Academy">
+            <img src="../Assets/Academic/LSA.jpg" alt="Little Stars Academy"/>
             <span>
                 <h2>Little Stars Academy</h2>
                 <p>This place is where I studied from Grade 8 and then graduated after Grade 10.</p>
             </span>
         </section>
         <section class="institute" id="bernHardt">
-            <img src="../Assets/Academic/BernHardt.png" alt="Kathmandu BernHardt Higher Secondary School">
+            <img src="../Assets/Academic/BernHardt.png" alt="Kathmandu BernHardt Higher Secondary School"/>
             <span>
                 <h2>Kathmandu BernHardt Higher Secondary School</h2>
                 <p>This place is where I studied +2 (High School).</p>
             </span>
         </section>
         <section class="institute" id="thapathali">
-            <img src="../Assets/Academic/Thapathali.jpg" alt="Thapathali Campus">
+            <img src="../Assets/Academic/Thapathali.jpg" alt="Thapathali Campus"/>
             <span>
                 <h2>IOE Thapathali Campus</h2>
                 <p>This is where I am currently pursuing my Bachelors in Computer Engineering degree.</p>
             </span>
         </section>
     </main>
+    <script src="../Scripts/themeProvider.js" type="module"></script>
     <script src="../Scripts/navBar.js" type="module"></script>
     <script src="../Scripts/mainSections.js" type="module"></script>
 </body>
