@@ -1,21 +1,49 @@
+:root[data-theme="light"]{
+    --bg-div: #ffffff;
+    --bg-span: #f1f5f9;
+    --bg-btn: #e2e8f0;
+    --border-color: #e2e8f0;
+    --hover-div: #eef2f7;
+    --hover-btn: #6366f1;
+    --a-text: #6366f1;             
+    --a-text-hover: #0f172a;
+    --p-color: #0f172a;
+    --gradient: linear-gradient(to right, #6366f1, #3b82f6, #06b6d4);
+    --gradient-hover: linear-gradient(to right, #4f46e5, #2563eb);
+}
+
+:root[data-theme="dark"]{
+    --bg-div: #1e293b;
+    --bg-span: #020617;
+    --bg-btn: #334155;
+    --border-color: #334155;
+    --hover-div: #2b3545;
+    --hover-btn: #818cf8;
+    --a-text: #818cf8;           
+    --a-text-hover: #ffffff;
+    --p-color: #e2e8f0;
+    --gradient: linear-gradient(to right, #818cf8, #38bdf8, #22c55e);
+    --gradient-hover: linear-gradient(to right, #6366f1, #0ea5e9);
+}
+
 footer{
     width: 100vw;
     height: auto;
     padding: 25px;
-    border: 2px solid #444444;
+    border: 2px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 71px;
-    background: rgba(128, 128, 128, 0.26);
+    background: var(--hover-div);
     box-sizing: content-box;
     z-index: 4;
 } 
 
 footer p{
     font-size: small;
-    background: linear-gradient(to right, white, grey, brown);
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -23,12 +51,12 @@ footer p{
 }
 
 footer p{
-    text-decoration: underline #444444;
+    text-decoration: underline var(--border-color);
 }
 
 footer h3{
     font-size: large;
-    background: linear-gradient(to right, white, grey, brown);
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
