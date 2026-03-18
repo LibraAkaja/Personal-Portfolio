@@ -14,7 +14,7 @@ export function setupThemeToggle() {
         const getIconSrc = (icon) => {
             const path = window.location.pathname;
             const prefix = path.includes("/Pages/") ? "../" : "";
-            return prefix + "Assets/" + icon + "?v=" + Date.now(); // cache bust
+            return prefix + "Assets/" + icon + "?v=" + Date.now();
         };
 
         const updateIcons = (theme) => {
