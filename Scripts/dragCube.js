@@ -1,6 +1,24 @@
 const cube = document.querySelector(".cubeContainer");
 
-/* Animation for dragging cube with finger or mouse pointer */
+/* Animation for mobile devices */
+
+function isTouchDevice() {
+    return window.matchMedia("(pointer: coarse)").matches;
+}
+
+function toggleCubeMode() {
+    if (isTouchDevice()) {
+        cube.classList.add("auto-rotate");
+    } else {
+        cube.classList.remove("auto-rotate");
+    }
+}
+
+toggleCubeMode();
+
+window.addEventListener("resize", toggleCubeMode);
+
+/* Animation for dragging cube with mouse pointer */
 
 let isDragging = false;
 let startX = 0, startY = 0;
@@ -9,6 +27,7 @@ let rotateX = 0, rotateY = 0, rotateZ = 0;
 let startRotateX = 0, startRotateY = 0;
 
 cube.addEventListener("pointerdown", (e) => {
+    if (isTouchDevice()) return;
     isDragging = true;
     cube.style.transition = "none";
     startX = e.clientX;
