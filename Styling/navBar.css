@@ -112,6 +112,7 @@ nav:hover {
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
+    backdrop-filter: blur(10px);
 }
 
 .navItem a {
@@ -130,8 +131,14 @@ nav:hover {
 .navItem--active {
     border-color: var(--nav-accent);
     background-color: var(--nav-hover-bg);
-    color: var(--nav-accent);
-    font-weight: 600;
+    box-shadow: 0 0 8px var(--nav-accent);
+}
+
+.navItem--active span {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navItem span {
